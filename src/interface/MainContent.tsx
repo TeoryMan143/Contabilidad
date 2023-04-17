@@ -40,33 +40,40 @@ function MainContent() {
                     Mostrar Planes
                 </DefButton>
             </div>
-            <div className='flex justify-center gap-7 flex-wrap '>
-                <TierCard title='BALANCE Esencial' price='21'>
-                    Ideal para quienes comienzan su aventura en la contabilidad,
-                    esta suscripción te brinda acceso a todos nuestros cursos
-                    introductorios y material de apoyo esencial para afianzar
-                    tus conocimientos básicos. Disfruta de la flexibilidad de
-                    aprender a tu ritmo y consulta tus dudas con nuestro equipo
-                    de profesionales.
-                </TierCard>
-                <TierCard title='BALANCE Profesional' price='44'>
-                    Diseñada para profesionales y emprendedores que buscan
-                    perfeccionar sus habilidades contables, esta suscripción
-                    incluye acceso a todos nuestros cursos intermedios y
-                    avanzados. Además, podrás participar en seminarios y
-                    talleres exclusivos, y disfrutar de evaluaciones y
-                    seguimiento personalizado por parte de nuestros expertos.
-                </TierCard>
-                <TierCard title='BALANCE Premium' price='100'>
-                    La opción más completa para aquellos que buscan una
-                    experiencia de aprendizaje superior y personalizada. Con
-                    esta suscripción, obtén acceso ilimitado a todos nuestros
-                    cursos, seminarios, y talleres, así como mentorías
-                    individuales con nuestros expertos en contabilidad. Además,
-                    disfruta de prioridad en atención al cliente, acceso
-                    anticipado a nuevos cursos y material exclusivo para
-                    miembros Premium.
-                </TierCard>
+            <div className='overflow-hidden'>
+                <div
+                    className={`flex justify-center gap-7 flex-wrap overflow-hidden relative ${
+                        showSubs ? 'translate-y-0' : '-translate-y-[42rem]'
+                    } transition-transform`}
+                >
+                    <TierCard title='BALANCE Esencial' price='21'>
+                        Ideal para quienes comienzan su aventura en la
+                        contabilidad, esta suscripción te brinda acceso a todos
+                        nuestros cursos introductorios y material de apoyo
+                        esencial para afianzar tus conocimientos básicos.
+                        Disfruta de la flexibilidad de aprender a tu ritmo y
+                        consulta tus dudas con nuestro equipo de profesionales.
+                    </TierCard>
+                    <TierCard title='BALANCE Profesional' price='44'>
+                        Diseñada para profesionales y emprendedores que buscan
+                        perfeccionar sus habilidades contables, esta suscripción
+                        incluye acceso a todos nuestros cursos intermedios y
+                        avanzados. Además, podrás participar en seminarios y
+                        talleres exclusivos, y disfrutar de evaluaciones y
+                        seguimiento personalizado por parte de nuestros
+                        expertos.
+                    </TierCard>
+                    <TierCard title='BALANCE Premium' price='100'>
+                        La opción más completa para aquellos que buscan una
+                        experiencia de aprendizaje superior y personalizada. Con
+                        esta suscripción, obtén acceso ilimitado a todos
+                        nuestros cursos, seminarios, y talleres, así como
+                        mentorías individuales con nuestros expertos en
+                        contabilidad. Además, disfruta de prioridad en atención
+                        al cliente, acceso anticipado a nuevos cursos y material
+                        exclusivo para miembros Premium.
+                    </TierCard>
+                </div>
             </div>
         </main>
     );

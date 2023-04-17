@@ -12,7 +12,11 @@ const handleSub = () => {
 
 function TierCard({ title, price, children }: Props) {
     return (
-        <div className='max-w-sm bg-slate-200 p-10 rounded-lg mt-12 flex flex-col justify-center'>
+        <div
+            className={
+                'max-w-sm bg-slate-200 p-10 rounded-lg mt-12 flex flex-col justify-center'
+            }
+        >
             <div>
                 <h2 className='text-center text-4xl font-dancing-script font-bold text-coral-red-500 mb-3'>
                     {title}
