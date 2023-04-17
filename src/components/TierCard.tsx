@@ -1,8 +1,14 @@
+import DefButton from './DefButton';
+
 interface Props {
     title: string;
     price: string;
     children: string;
 }
+
+const handleSub = () => {
+    alert('No disponible por el momento');
+};
 
 function TierCard({ title, price, children }: Props) {
     return (
@@ -20,10 +26,9 @@ function TierCard({ title, price, children }: Props) {
                     <span className='text-2xl'>/ mes</span>
                 </h3>
                 <p className='text-center flex-grow'>{children}</p>
+
                 <div className='flex flex-col justify-end'>
-                    <button className='bg-coral-red-500 text-white text-lg font-semibold p-4 rounded-full hover:bg-coral-red-400 active:translate-y-0.5'>
-                        Suscribirse
-                    </button>
+                    <DefButton onClick={handleSub}>Suscribirse</DefButton>
                 </div>
             </div>
         </div>

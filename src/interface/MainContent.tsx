@@ -1,8 +1,18 @@
 import { TypeAnimation } from 'react-type-animation';
 import MainText from './MainText';
 import TierCard from '../components/TierCard';
+import DefButton from '../components/DefButton';
+import { IoIosArrowBack } from 'react-icons/io';
+import { useContext } from 'react';
+import { SubsContext } from '../context/SubsContext';
 
 function MainContent() {
+    const { showSubs, setShowSubs } = useContext(SubsContext);
+
+    const handleShow = () => {
+        setShowSubs(!showSubs);
+    };
+
     return (
         <main className='p-20 flex-grow bg-slate-400'>
             <h2 className='text-center text-5xl font-dongle'>
@@ -25,7 +35,12 @@ function MainContent() {
                 con BALANCE! 🌟
             </h2>
             <MainText />
-            <div className='flex justify-center gap-7 flex-wrap'>
+            <div className='flex justify-center my-7'>
+                <DefButton icon={<IoIosArrowBack />} onClick={handleShow}>
+                    Mostrar Planes
+                </DefButton>
+            </div>
+            <div className='flex justify-center gap-7 flex-wrap '>
                 <TierCard title='BALANCE Esencial' price='21'>
                     Ideal para quienes comienzan su aventura en la contabilidad,
                     esta suscripción te brinda acceso a todos nuestros cursos
