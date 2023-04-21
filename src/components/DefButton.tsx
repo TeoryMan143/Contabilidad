@@ -12,7 +12,7 @@ function DefButton({ children, icon, onClick }: Props) {
 
     return (
         <button
-            className='bg-coral-red-500 text-white text-lg font-semibold p-4 rounded-full hover:bg-coral-red-400 active:translate-y-0.5 flex items-center'
+            className='bg-coral-red-500 text-white text-lg font-semibold p-4 rounded-full hover:bg-coral-red-400 active:translate-y-0.5 active:bg-coral-red-500 flex items-center'
             onClick={onClick}
         >
             {icon && (
