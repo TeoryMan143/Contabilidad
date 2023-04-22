@@ -14,7 +14,7 @@ function MainContent() {
     };
 
     return (
-        <main className='p-20 flex-grow bg-slate-400'>
+        <main className='p-20 flex-grow bg-slate-400 relative'>
             <h2 className='text-center text-5xl font-dongle'>
                 🌟 ¡Descubre el mundo de
                 <TypeAnimation
@@ -40,11 +40,17 @@ function MainContent() {
                     Mostrar Planes
                 </DefButton>
             </div>
-            <div className='overflow-hidden'>
+            <div
+                className={`overflow-hidden left-0 right-0 my-0 mx-auto ${
+                    showSubs ? 'relative' : 'absolute'
+                }`}
+            >
                 <div
-                    className={`flex justify-center gap-7 flex-wrap overflow-hidden relative ${
-                        showSubs ? 'translate-y-0' : '-translate-y-[42rem]'
-                    } transition-transform`}
+                    className={`flex justify-center gap-7 overflow-hidden relative transition-transform ${
+                        showSubs
+                            ? 'translate-y-0 flex-wrap'
+                            : '-translate-y-[50rem] sm:-translate-y-[69rem]'
+                    }`}
                 >
                     <TierCard title='BALANCE Esencial' price='21'>
                         Ideal para quienes comienzan su aventura en la
