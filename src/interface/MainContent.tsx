@@ -22,13 +22,7 @@ function MainContent() {
                     small ? 'text-4xl' : 'text-5xl'
                 }`}
             >
-                🌟 ¡Descubre el mundo{' '}
-                {small && (
-                    <>
-                        🌟
-                        <br />
-                    </>
-                )}
+                {!small && '🌟'} ¡Descubre el mundo {small && <br />}
                 de
                 <TypeAnimation
                     sequence={[
@@ -46,7 +40,14 @@ function MainContent() {
                     repeat={Infinity}
                 />
                 {small && <br />}
-                con BALANCE! {!small && '🌟'}
+                con
+                {small && (
+                    <>
+                        <br />
+                        {'🌟 '}
+                    </>
+                )}
+                BALANCE! 🌟
             </h2>
             <MainText />
             <div className='flex justify-center my-7'>
