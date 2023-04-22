@@ -5,9 +5,11 @@ import DefButton from '../components/DefButton';
 import { IoIosArrowBack } from 'react-icons/io';
 import { useContext } from 'react';
 import { SubsContext } from '../context/SubsContext';
+import { ResponsiveContext } from '../context/ResponsiveContext';
 
 function MainContent() {
     const { showSubs, setShowSubs } = useContext(SubsContext);
+    const { small } = useContext(ResponsiveContext);
 
     const handleShow = () => {
         setShowSubs(!showSubs);
@@ -15,8 +17,19 @@ function MainContent() {
 
     return (
         <main className='p-20 flex-grow bg-slate-400 relative'>
-            <h2 className='text-center text-5xl font-dongle'>
-                🌟 ¡Descubre el mundo de
+            <h2
+                className={`text-center font-dongle ${
+                    small ? 'text-4xl' : 'text-5xl'
+                }`}
+            >
+                🌟 ¡Descubre el mundo
+                {small && (
+                    <>
+                        🌟
+                        <br />
+                    </>
+                )}
+                de
                 <TypeAnimation
                     sequence={[
                         ' la contabilidad',
@@ -29,10 +42,11 @@ function MainContent() {
                         1000,
                     ]}
                     wrapper='span'
-                    cursor={true}
+                    cursor
                     repeat={Infinity}
                 />
-                con BALANCE! 🌟
+                {small && <br />}
+                con BALANCE! {!small && '🌟'}
             </h2>
             <MainText />
             <div className='flex justify-center my-7'>
@@ -49,7 +63,7 @@ function MainContent() {
                     className={`flex justify-center gap-7 overflow-hidden relative transition-transform ${
                         showSubs
                             ? 'translate-y-0 flex-wrap'
-                            : '-translate-y-[50rem] sm:-translate-y-[69rem]'
+                            : '-translate-y-[90rem]'
                     }`}
                 >
                     <TierCard title='BALANCE Esencial' price='21'>
