@@ -22,7 +22,7 @@ function MainContent() {
                     small ? 'text-4xl' : 'text-5xl'
                 }`}
             >
-                🌟 ¡Descubre el mundo
+                🌟 ¡Descubre el mundo{''}
                 {small && (
                     <>
                         🌟
