@@ -40,7 +40,7 @@ function MainContent() {
                     repeat={Infinity}
                 />
                 {small && <br />}
-                con
+                con{' '}
                 {small && (
                     <>
                         <br />
